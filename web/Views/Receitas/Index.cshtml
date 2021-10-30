@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MasterChef.Domain.Models.Receita>
+
+@{
+    ViewData["Titulo"] = "Index";
+}
+
+<h1>Receitas</h1>
+
+<p>
+    <a asp-action="Create">Criar Nova Receita</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>           
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tempo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rendimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredientes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preparo)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+
+
+                @{ var base64 = Convert.ToBase64String(item.Foto);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64); }
+
+                <img src="@imgSrc" width="100px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tempo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rendimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredientes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

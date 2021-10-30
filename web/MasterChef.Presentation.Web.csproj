@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\CategoriasCategorias\**" />
+    <Compile Remove="Views\ReceitasReceita\**" />
+    <Content Remove="Views\CategoriasCategorias\**" />
+    <Content Remove="Views\ReceitasReceita\**" />
+    <EmbeddedResource Remove="Views\CategoriasCategorias\**" />
+    <EmbeddedResource Remove="Views\ReceitasReceita\**" />
+    <None Remove="Views\CategoriasCategorias\**" />
+    <None Remove="Views\ReceitasReceita\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\bundle.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\bundle.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery.lazy-master\gulpfile.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\jquery.lazy.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\jquery.lazy.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\jquery.lazy.plugins.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\jquery.lazy.plugins.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\LICENSE" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.ajax.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.ajax.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.av.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.av.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.iframe.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.iframe.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.noop.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.noop.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.picture.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.picture.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.script.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.script.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.vimeo.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.vimeo.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.youtube.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\jquery.lazy.youtube.min.js" />
+    <None Include="wwwroot\lib\jquery.lazy-master\plugins\README.md" />
+    <None Include="wwwroot\lib\jquery.lazy-master\README.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.Logentries" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fiap.Application\MasterChef.Application.csproj" />
+    <ProjectReference Include="..\Fiap.Infrastructer\MasterChef.Infrastructer.csproj" />
+    <ProjectReference Include="..\Fiap.IoC\MasterChef.IoC.csproj" />
+    <ProjectReference Include="..\Fiap.Persistence\MasterChef.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,64 @@
+﻿@model MasterChef.Domain.Models.Receita
+
+@{
+    ViewData["Titulo"] = "Excluir";
+}
+
+<h1>Excluir</h1>
+
+<h3>Tem certeza que deseja excluir?</h3>
+<div>
+    <h4>Receita</h4>
+    <hr />
+    <dl class="row">
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Categoria.Descricao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Foto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Foto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tempo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tempo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rendimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rendimento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ingredientes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ingredientes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Preparo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Preparo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Volar para lista</a>
+    </form>
+</div>
